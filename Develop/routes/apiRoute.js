@@ -1,9 +1,15 @@
-const currentNotes = require('../db/db.json')
-const route = require('express').Router();
+const currentNotes = require('../db/db.json');
+const { route } = require('./htmlRoute');
+const router = require('express').Router();
 
-route.get ('/notes', (req, res) => {
+router.get ('/notes', (req, res) => {
+    res.json(currentNotes)
+});
 
-    currentNotes .getNotes().then(notes => res.json(notes))
+router.post ('/notes', (req, res) => {
+    currentNotes.push(req.body)
+    console.log('currentNotes: ', currentNotes);
+    res.json(currentNotes);
 })
 
-module.exports = route;
+module.exports = router;

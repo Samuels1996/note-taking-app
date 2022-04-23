@@ -2,7 +2,7 @@ const express = require('express');
 
 const apiRoute = require('./routes/apiRoute');
 
-const htmlRoute = require('./routes/htmlRoute')
+const htmlRoute = require('./routes/htmlRoute');
 
 const app = express();
 
@@ -15,5 +15,5 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
 app.listen(PORT, () => {
-    console.log(`App listening on PORT: ${PORT}`);
+    console.log(`App listening on PORT: http://localhost:${PORT}`);
 });
