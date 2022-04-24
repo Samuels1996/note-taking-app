@@ -5,6 +5,7 @@
 This is a note taking application so that you can keep all of your notes in one handy tab!
 
 <img src='./note-taker.png' alt='This is the image for the page'>
+
 ## Installation
 
 To install this application download the repository from github and then you can use it on your own local host!
